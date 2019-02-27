@@ -49,7 +49,7 @@ Run `npm test` or `swagger project test` at root to execute the written test cas
 
 ## Limitation, Risk & To-Do
 1. This pattern is mainly for RESTful API and will not work for other pattern (e.g. batch service, cron-tainer).
-2. Security is a big issue with the current state. There need to be some mechanism for Authentication & Authorization.
+2. Security is a big issue with the current state. There need to be some mechanism for Authentication & Authorization for every invocation to the service.
 3. Service management (e.g. rate limiting, analytics ) is also missing. Probably an API / service gateway is needed.
 4. Add `PromClient` and a new controller to epxose metrics
 5. Add `Eslint` for, well, linting
