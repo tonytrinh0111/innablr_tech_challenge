@@ -22,11 +22,6 @@ A boilerplate to help start microservices projects in Node.js quickly. Packaged 
 7. Run `npm start` to start as usual
 8. Run `swagger project start -m` to start in mock mode
 
-### Running with Docker
-
-1. Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
-2. Clone the repo and cd to it
-2. Run `docker-compose up` to get the containers installed and started.
 
 ### Pulling & Running from Docker Hub
 

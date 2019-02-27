@@ -12,8 +12,7 @@ jobs:
         - npm run test
     - stage: "build and deploy"
       script:
-        - docker build --force-rm=true --build-arg GIT_COMMIT=$TRAVIS_COMMIT -t $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT .
+        - docker build --force-rm=true --build-arg GIT_COMMIT=$TRAVIS_COMMIT -t $TRAVIS_REPO_SLUG .
       after_success:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
-        - echo $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT
-        - docker push $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT ;
+        - docker push $TRAVIS_REPO_SLUG;
