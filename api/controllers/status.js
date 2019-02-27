@@ -10,9 +10,11 @@ module.exports = {
 
 function getStatus(req, res) {
     var myApp = [];
+    var lastcommitsha = process.env.LAST_COMMIT_SHA;
     var obj = {
         version,
-        description
+        description,
+        lastcommitsha
     };
     myApp.push(obj);
     res.json({

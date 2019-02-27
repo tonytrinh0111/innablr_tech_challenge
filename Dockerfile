@@ -1,7 +1,7 @@
 FROM node:11.0.0
 
-# ARG APP_PORT
-# ENV NODEJS_IP "0.0.0.0"
+ARG GIT_COMMIT
+ENV LAST_COMMIT_SHA ${GIT_COMMIT}
 
 RUN mkdir -p /app/server
 WORKDIR /app/server
