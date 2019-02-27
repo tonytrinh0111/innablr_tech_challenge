@@ -19,15 +19,14 @@ A boilerplate to help start microservices projects in Node.js quickly. Packaged 
 2. Add them to path if not already in path.
 4. Clone the repo and cd to it
 6. Run `npm install` to get all the dependencies
-7. Run `npm start` to start as usual
+7. Run `npm start` to start as usual. Note that `lastcommitsha` is only available when running Docker image from DockerHub
 8. Run `swagger project start -m` to start in mock mode
 
 
 ### Pulling & Running from Docker Hub
 
-1. Pull from DockerHub `docker pull tonytrinh0111/innablr-tech-challenge`
-
-2. Then, start `docker run -d -p 3000:3000 -e NODEJS_PORT=3000 -e NODE_ENV=development -e NODEJS_IP=0.0.0.0 tonytrinh0111/innablr-tech-challenge`
+1. Pull from DockerHub `docker pull tonytrinh0111/innablr_tech_challenge`
+2. Then, start `docker run -d -p 3000:3000 -e NODEJS_PORT=3000 -e NODE_ENV=development -e NODEJS_IP=0.0.0.0 tonytrinh0111/innablr_tech_challenge`
 
 
 ## API Spec (OpenAPI/Swagger)
@@ -39,7 +38,7 @@ Run swagger editor by `swagger project edit` at root
 ## Logging
 
 An example in `app.js`
-`logger.log('info','try:\ncurl http://127.0.0.1:' + port...);`
+`logger.log('info','try: \n curl http://127.0.0.1:' + port...);`
 
 More info at [Winston](https://github.com/winstonjs/winston)
 
@@ -48,10 +47,15 @@ More info at [Winston](https://github.com/winstonjs/winston)
 Run `npm test` or `swagger project test` at root to execute the written test case
 
 
-## To-Do
-1. Add `PromClient` and a new controller to epxose metrics
-2. Add `Eslint` for, well, linting
-3. Probably need to re-structure a bit (i.e. `/src/` for all source code or a dedicated folder for static content?)
-4. Or, just use Loopback framwork instead?
+## Limitation, Risk & To-Do
+1. This pattern is mainly for RESTful API and will not work for other pattern (e.g. batch service, cron-tainer).
+2. Security is a big issue with the current state. There need to be some mechanism for Authentication & Authorization.
+3. Service management (e.g. rate limiting, analytics ) is also missing. Probably an API / service gateway is needed.
+4. Add `PromClient` and a new controller to epxose metrics
+5. Add `Eslint` for, well, linting
+6. Probably need to re-structure a bit (i.e. `/src/` for all source code, a dedicated folder for static content?)
+7. If the situation allows, perhaps consider using Loopback or another framework with all these boilerplates
 5. Nah mate! If you are really reading this line, you need to buy me a beer!
+
+
 

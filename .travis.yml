@@ -10,7 +10,7 @@ jobs:
       script:
         - npm install
         - npm run test
-    - stage: "build and deploy"
+    - stage: "build and publish"
       script:
         - docker build --force-rm=true --build-arg GIT_COMMIT=$TRAVIS_COMMIT -t $TRAVIS_REPO_SLUG .
       after_success:
