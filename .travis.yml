@@ -16,4 +16,5 @@ jobs:
     - stage: publish
       script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
-        - docker push $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT;
+        - echo $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT
+        - docker push $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT ;
