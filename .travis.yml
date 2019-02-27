@@ -10,11 +10,10 @@ jobs:
       script:
         - npm install
         - npm run test
-    - stage: build
+    - stage: "build and deploy"
       script:
         - docker build --force-rm=true -t $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT .
-    - stage: publish
-      script:
+      after_success:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
         - echo $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT
         - docker push $TRAVIS_REPO_SLUG:$TRAVIS_COMMIT ;
