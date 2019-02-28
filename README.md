@@ -50,12 +50,13 @@ Run `npm test` or `swagger project test` at root to execute the written test cas
 ## Limitation, Risk & To-Do
 1. This pattern is mainly for RESTful API and will not work for other pattern (e.g. batch service, cron-tainer).
 2. Security is a big issue with the current state. There need to be some mechanism for Authentication & Authorization for every invocation to the service.
-3. Service management (e.g. rate limiting, analytics ) is also missing. Probably an API / service gateway is needed.
-4. Add `PromClient` and a new controller to epxose metrics
-5. Add `Eslint` for, well, linting
-6. Probably need to re-structure a bit (i.e. `/src/` for all source code, a dedicated folder for static content?)
-7. If the situation allows, perhaps consider using Loopback or another framework with all these boilerplates
-5. Nah mate! If you are really reading this line, you need to buy me a beer!
+3. The API spec should include standard traits for error handling (HTTP response), pagination, tracibility (transactionId, source, timestamp etc.)
+4. Service management (e.g. rate limiting, analytics ) is also missing. Probably an API / service gateway is needed.
+5. Add `PromClient` and a new controller to epxose metrics
+6. Add `Eslint` for, well, linting
+7. Probably need to re-structure a bit (i.e. `/src/` for all source code, a dedicated folder for static content?)
+8. If the situation allows, perhaps consider using Loopback or another framework with all these boilerplates
+9. Nah mate! If you are really reading this line, you need to buy me a beer!
 
 
 
