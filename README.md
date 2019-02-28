@@ -26,7 +26,7 @@ A boilerplate to help start microservices projects in Node.js quickly. Packaged 
 ### Pulling & Running from Docker Hub
 
 1. Pull from DockerHub `docker pull tonytrinh0111/innablr_tech_challenge`
-2. Then, start `docker run -d -p 3000:3000 -e NODEJS_PORT=3000 -e NODE_ENV=development -e NODEJS_IP=0.0.0.0 tonytrinh0111/innablr_tech_challenge`
+2. Then, start `docker run -d -p 3000:3000 tonytrinh0111/innablr_tech_challenge`
 
 
 ## API Spec (OpenAPI/Swagger)
